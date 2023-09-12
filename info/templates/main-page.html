@@ -1,7 +1,36 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Main page{% endblock %}
 
 {% block content %}
     <p>Last article: <a href="{{ last_article.get_absolute_url }}">{{ last_article.title }}</a></p>
+    <article>
+        <img alt="Advertising banner for a website: how to make it yourself"
+             data-src="https://romi.center/wp-content/uploads/2020/09/Яндекс-Директ-баннеры.png"
+             src="https://romi.center/wp-content/uploads/2020/09/Яндекс-Директ-баннеры.png"
+             height="300" width="600">
+        <p>Read also</p>
+        <p> Yandex.Direct banners: advantages and nuances of creation</p>
+        <p> What is a banner? A static or dynamic image or video ad that they contain information about a product or
+            service and send the user to the advertiser's website …</p>
+        <a href="https://romi.center/ru/learning/article/yandeks-direkt-banneri-preimushtestva-i/" class="read_more">
+            More
+        </a>
+    </article>
+    <section>
+        <h3>Our partners</h3>
+        <a href="https://sosedi.by/">
+            <img alt="sosedi" src="{% static 'images/sosedi.png' %}" height="100" width="100">
+        </a>
+        <a href="https://sherlockcoffeehall.business.site/">
+            <img alt="sherlock coffee hall" src="{% static 'images/sherlock.png' %}" height="100" width="100">
+        </a>
+        <a href="https://github.com/">
+            <img alt="github" src="{% static 'images/github.png' %}" height="100" width="100">
+        </a>
+        <a href="https://www.w3schools.com/">
+            <img alt="w3schools" src="{% static 'images/w3schools.png' %}" height="100" width="100">
+        </a>
+    </section>
 {% endblock %}

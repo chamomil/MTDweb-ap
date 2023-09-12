@@ -1,4 +1,5 @@
-{% load static %}<!DOCTYPE html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,17 +14,17 @@
 
 <body>
 <header>
-    <h1>Movies app</h1>
+    <h1>Cinema</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'article-list' %}">News</a></li>
+            <li><a href="{% url 'feedback-list' %}">Feedbacks</a></li>
+            <li><a href="{% url 'movies-list' %}">Movies</a></li>
+            <li><a href="{% url 'privacy-policy' %}">Privacy policy</a></li>
+        </ul>
+    </nav>
 </header>
-<nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="{% url 'article-list' %}">News</a></li>
-        <li><a href="{% url 'feedback-list' %}">Feedbacks</a></li>
-        <li><a href="{% url 'movies-list' %}">Movies</a></li>
-        <li><a href="{% url 'privacy-policy' %}">Privacy policy</a></li>
-    </ul>
-</nav>
 <p>
     {% if user.is_authenticated %}
         Hello, {{ user.get_username }}!
