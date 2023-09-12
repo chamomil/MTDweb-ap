@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+    <br>
+    <h1>Movies</h1>
+    <form action="{% url 'sign_up' %}" method="get">
+        <input name="search" type="text" placeholder="Search..." {% if search %} value="{{ search }}{% endif %}">
+        <input name="genre" type="text" placeholder="Search by genre..." {% if genre %} value="{{ genre }}"{% endif %}>
+        <button type="submit">Search</button>
+    </form>
+    <br>
+    {% if movies_list %}
+
+        {% for movie in movies_list %}
+            {% if movie.moviesession_set.count != 0 %}
+                <p><a href="{% url 'movie-details' movie.id %}">{{ movie.title }}</a></p>
+                <p>Genre: {% for ganr in  movie.genre.all %}{{ ganr }}, {% endfor %}</p>
+                <hr/>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <p>No movies are available.</p>
+    {% endif %}
+    <footer>
+        <img src="{{ random_dog }}" height="200">
+        <p></p>
+        <p>Random joke: {{ random_joke }}</p>
+    </footer>
+{% endblock %}

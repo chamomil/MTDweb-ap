@@ -1,16 +1,15 @@
-from django.contrib.auth import login
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render, redirect, get_object_or_404
-from django.urls import reverse
+from django.shortcuts import get_object_or_404
+from django.urls import reverse, reverse_lazy
 from django.views import generic
 
-from .forms import RegisterForm, ReserveTicketForm, ConfirmTicketForm
+from .forms import ReserveTicketForm, ConfirmTicketForm
 from .models import Movie, Payment, MovieSession
 from .services import get_random_dog, get_random_joke
 
 
-class IndexView(generic.ListView):
-    template_name = "catalog/index.html"
+class MoviesListView(generic.ListView):
+    template_name = "catalog/movies-list.html"
     context_object_name = "movies_list"
 
     def get_queryset(self):
@@ -37,21 +36,8 @@ class IndexView(generic.ListView):
 
 class DetailView(LoginRequiredMixin, generic.DetailView):
     model = Movie
-    template_name = "catalog/detail.html"
-    login_url = "/login/"
-
-
-def sign_up(request):
-    if request.method == "POST":
-        form = RegisterForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect("/catalog")
-    else:
-        form = RegisterForm()
-
-    return render(request, "registration/sign_up.html", {"form": form})
+    template_name = "catalog/movie-details.html"
+    login_url = reverse_lazy("login")
 
 
 class ReserveTicket(generic.RedirectView):
@@ -63,7 +49,7 @@ class ReserveTicket(generic.RedirectView):
 
             new_payment = Payment(userId=self.request.user.id, movie_session=session)
             new_payment.save()
-            return f"/catalog/confirm_pay/{new_payment.id}"
+            return reverse("confirm_pay", new_payment.id)
 
 
 class ConfirmReservation(generic.DetailView):
@@ -82,13 +68,13 @@ class ConfirmationHandler(generic.RedirectView):
             else:
                 payment.status = "s"
             payment.save()
-        return reverse("catalog:index")
+        return reverse("movies-list")
 
 
 class MyTickets(LoginRequiredMixin, generic.ListView):
     template_name = "catalog/my_tickets.html"
     context_object_name = "tickets_list"
-    login_url = "/login/"
+    login_url = reverse_lazy("login")
 
     def get_queryset(self):
         return Payment.objects.filter(
@@ -103,4 +89,4 @@ class DeleteTicketView(generic.RedirectView):
             payment = Payment.objects.get(pk=pk)
             payment.delete()
 
-        return reverse("catalog:my_tickets")
+        return reverse("my_tickets")

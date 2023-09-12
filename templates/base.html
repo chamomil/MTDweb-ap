@@ -1,0 +1,44 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Movies, tickets, News"/>
+    <meta name="description" content="Movies web application"/>
+    <meta name="author" content="Makaranka Aliona"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+
+<body>
+<header>
+    <h1>Movies app</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="{% url 'article-list' %}">News</a></li>
+        <li><a href="{% url 'feedback-list' %}">Feedbacks</a></li>
+        <li><a href="{% url 'movies-list' %}">Movies</a></li>
+        <li><a href="{% url 'privacy-policy' %}">Privacy policy</a></li>
+    </ul>
+</nav>
+<p>
+    {% if user.is_authenticated %}
+        Hello, {{ user.get_username }}!
+        <a href="{% url 'logout' %}">Log out</a>
+    {% else %}
+        <a href="{% url 'sign_up' %}">Sign up</a>
+        <a href="{% url 'login' %}">Sign in</a>
+    {% endif %}
+</p>
+<main>
+    <article>
+        {% block content %}
+        {% endblock %}
+    </article>
+</main>
+
+</body>
+</html>

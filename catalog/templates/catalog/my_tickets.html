@@ -1,4 +1,4 @@
-{%  extends 'main/base.html' %}
+{%  extends 'base.html' %}
 {% block title %}Home Page{% endblock %}
 {% block content %}
     <p></p>
@@ -11,9 +11,9 @@
             <p>Lounge {{ ticket.movie_session.lounge.number }},  Date: {{ ticket.movie_session.date }}</p>
             <p>Price: {{ ticket.movie_session.price_per_ticket }}</p>
             <p></p>
-            <form action="{% url 'catalog:my_tickets_delete' ticket.id %}">
+            <form action="{% url 'my_tickets_delete' ticket.id %}">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-danger">Delete ticket</button>
+                <button type="submit">Delete ticket</button>
             </form>
         {% endfor %}
     {% else %}

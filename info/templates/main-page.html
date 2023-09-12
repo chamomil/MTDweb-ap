@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block title %}Main page{% endblock %}
+
+{% block content %}
+    <p>Last article: <a href="{{ last_article.get_absolute_url }}">{{ last_article.title }}</a></p>
+{% endblock %}

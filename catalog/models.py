@@ -24,12 +24,6 @@ class MovieSession(models.Model):
     lounge = models.ForeignKey("Lounge", on_delete=models.CASCADE)
     price_per_ticket = models.FloatField(default=10.0)
 
-    def is_valid(self):
-        return (
-            self.date >= timezone.now().date()
-            and self.payment_set.count() < self.lounge.capacity
-        )
-
     def __str__(self):
         return self.movie.title
 

@@ -1,19 +1,16 @@
-from django.urls import path
-
-from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path
 
 from . import views
 
-app_name = "catalog"
 urlpatterns = [
-    path("", views.IndexView.as_view(), name="index"),
-    path("<int:pk>/", views.DetailView.as_view(), name="detail"),
-    path("sign-up/", views.sign_up, name="sign_up"),
-    path("reserve-ticket", views.ReserveTicket.as_view(), name="reserve_ticket"),
+    path("", views.MoviesListView.as_view(), name="movies-list"),
+    path("<int:pk>/", views.DetailView.as_view(), name="movie-details"),
     path(
         "confirm_pay/<int:pk>", views.ConfirmReservation.as_view(), name="confirm_pay"
     ),
+    path("reserve-ticket", views.ReserveTicket.as_view(), name="reserve_ticket"),
     path(
         "confirm_handler", views.ConfirmationHandler.as_view(), name="confirm_handler"
     ),
