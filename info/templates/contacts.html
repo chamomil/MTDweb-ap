@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contacts{% endblock %}
+{% block content %}
+    <h2>Our staff</h2>
+    {% if object_list.count == 0 %}
+        <p>No workers yet! Call us if you're interested!</p>
+    {% endif %}
+    {% for worker in object_list %}
+        <img src="{{ worker.photo.url }}" alt="photo" height="300">
+        <p>{{ worker.first_name }} {{ worker.last_name }}</p>
+        <p>Job role: {{ worker.job_role }}</p>
+        <p>{{ worker.phone_number }}</p>
+        <p>{{ worker.email_address }}</p>
+    {% endfor %}
+{% endblock %}

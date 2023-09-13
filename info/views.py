@@ -1,6 +1,7 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 
 from articles.models import Article
+from .models import Worker
 
 
 class MainPageTemplateView(TemplateView):
@@ -22,3 +23,8 @@ class AboutUsTemplateView(TemplateView):
 
 class FAQsTemplateView(TemplateView):
     template_name = "faqs.html"
+
+
+class ContactsListView(ListView):
+    template_name = "contacts.html"
+    model = Worker
