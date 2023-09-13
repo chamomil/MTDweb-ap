@@ -16,5 +16,5 @@ class PrivacyPolicyTemplateView(TemplateView):
     template_name = "privacy-policy.html"
 
 
-class AboutCompanyTemplateView(TemplateView):
-    template_name = "about-company.html"
+class AboutUsTemplateView(TemplateView):
+    template_name = "about-us.html"
