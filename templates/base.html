@@ -8,7 +8,7 @@
     <meta name="description" content="Movies web application"/>
     <meta name="author" content="Makaranka Aliona"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="shortcut icon" type="image/png" href="{% static 'logos/favicon.png' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'logos/cinema_logo.png' %}">
     <title>{% block title %}Home{% endblock %}</title>
 </head>
 
@@ -41,10 +41,8 @@
     {% endif %}
 </p>
 <main>
-    <article>
-        {% block content %}
-        {% endblock %}
-    </article>
+    {% block content %}
+    {% endblock %}
 </main>
 
 </body>

@@ -7,10 +7,12 @@
         <p>No workers yet! Call us if you're interested!</p>
     {% endif %}
     {% for worker in object_list %}
-        <img src="{{ worker.photo.url }}" alt="photo" height="300">
-        <p>{{ worker.first_name }} {{ worker.last_name }}</p>
-        <p>Job role: {{ worker.job_role }}</p>
-        <p>{{ worker.phone_number }}</p>
-        <p>{{ worker.email_address }}</p>
+        <article itemscope itemtype="https://schema.org/Person">
+            <img src="{{ worker.photo.url }}" alt="photo" height="300">
+            <p itemprop="name">{{ worker.first_name }} {{ worker.last_name }}</p>
+            <p>Job role: <span itemprop="jobTitle">{{ worker.job_role }}</span></p>
+            <p itemprop="telephone">{{ worker.phone_number }}</p>
+            <p><a href="mailto:{{ worker.email_address }}" itemprop="email">{{ worker.email_address }}</a></p>
+        </article>
     {% endfor %}
 {% endblock %}

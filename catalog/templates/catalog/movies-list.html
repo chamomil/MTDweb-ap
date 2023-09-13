@@ -2,28 +2,37 @@
 {% block title %}Home Page{% endblock %}
 {% block content %}
     <br>
-    <h1>Movies</h1>
-    <form action="{% url 'sign_up' %}" method="get">
-        <input name="search" type="text" placeholder="Search..." {% if search %} value="{{ search }}{% endif %}">
-        <input name="genre" type="text" placeholder="Search by genre..." {% if genre %} value="{{ genre }}"{% endif %}>
-        <button type="submit">Search</button>
-    </form>
-    <br>
-    {% if movies_list %}
-
-        {% for movie in movies_list %}
-            {% if movie.moviesession_set.count != 0 %}
-                <p><a href="{% url 'movie-details' movie.id %}">{{ movie.title }}</a></p>
-                <p>Genre: {% for ganr in  movie.genre.all %}{{ ganr }}, {% endfor %}</p>
-                <hr/>
-            {% endif %}
-        {% endfor %}
-    {% else %}
-        <p>No movies are available.</p>
-    {% endif %}
-    <footer>
-        <img src="{{ random_dog }}" height="200">
+    <section itemscope itemtype="https://schema.org/Movie">
+        <h2 itemprop="name">Movies</h2>
+        <form action="{% url 'sign_up' %}" method="get">
+            <input name="search" type="text" placeholder="Search..." {% if search %} value="{{ search }}"{% endif %}>
+            <input name="genre" type="text" placeholder="Search by genre..." {% if genre %} value="{{ genre }}"{% endif %}>
+            <button type="submit">Search</button>
+        </form>
+        {% if movies_list %}
+            {% for movie in movies_list %}
+                {% if movie.moviesession_set.count != 0 %}
+                    <article itemprop="about" itemscope itemtype="https://schema.org/Article">
+                        <h3 itemprop="name"><a href="{% url 'movie-details' movie.id %}" itemprop="url">{{ movie.title }}</a></h3>
+                        <meta itemprop="description" content="{{ movie.description }}">
+                        <p>Genre:
+                            <span itemprop="genre">
+                                {% for genre in movie.genre.all %}
+                                    <span itemprop="genre">{{ genre }}</span>{% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </span>
+                        </p>
+                    </article>
+                    <hr/>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <p>No movies are available.</p>
+        {% endif %}
+    </section>
+    <footer itemscope itemtype="https://schema.org/WebPage">
+        <img itemprop="image" src="{{ random_dog }}" height="200" alt="random dog">
         <p></p>
-        <p>Random joke: {{ random_joke }}</p>
+        <p>Random joke: <span itemprop="description">{{ random_joke }}</span></p>
     </footer>
 {% endblock %}
