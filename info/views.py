@@ -28,3 +28,7 @@ class FAQsTemplateView(TemplateView):
 class ContactsListView(ListView):
     template_name = "contacts.html"
     model = Worker
+
+
+class VacanciesTemplateView(TemplateView):
+    template_name = "vacancies.html"
