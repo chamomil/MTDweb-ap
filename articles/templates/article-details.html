@@ -5,7 +5,7 @@
 {% block content %}
     <h2>{{ object.title }}</h2>
     <h3>{{ object.description }}</h3>
+    <img src="{{ article.article_image.url }}" alt="article poster" height="400">
     <p>{{ object.content }}</p>
-
-    <p><a href="{% url 'article-list' %}">Back to the list</a></p>
+    <p><a href="{% url 'article-list' %}">Back to the news</a></p>
 {% endblock %}
