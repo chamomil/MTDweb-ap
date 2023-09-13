@@ -32,3 +32,7 @@ class ContactsListView(ListView):
 
 class VacanciesTemplateView(TemplateView):
     template_name = "vacancies.html"
+
+
+class CouponsTemplateView(TemplateView):
+    template_name = "coupons.html"
