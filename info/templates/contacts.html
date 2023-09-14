@@ -15,4 +15,23 @@
             <p><a href="mailto:{{ worker.email_address }}" itemprop="email">{{ worker.email_address }}</a></p>
         </article>
     {% endfor %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th id="header1">ID</th>
+                <th id="header2">Name</th>
+                <th id="header3" colspan="2">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for worker in object_list %}
+            <tr>
+                <td headers="header1">{{ worker.id }}</td>
+                <td headers="header2">{{ worker.first_name }} {{ worker.last_name }}</td>
+                <td headers="header3">{{ worker.email_address }}</td>
+                <td headers="header3">{{ worker.job_role }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
