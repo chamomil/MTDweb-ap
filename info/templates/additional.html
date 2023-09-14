@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contacts{% endblock %}
+{% block content %}
+    <h2>Additional page</h2>
+    <code>
+        int a = 0;
+        std::cout << ++a;
+        for (int i = 0; i < 10; ++i) {
+        a *= i;
+        }
+        std::cout << ++a;
+    </code>
+    <br>
+    <audio controls autoplay muted>
+        <source src="{% static "audio/zvuk-barabannoj-drobi.mp3" %}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <iframe src="https://www.nbcnews.com/news/world/mv-ocean-explore-covid-luxury-cruise-ship-ran-aground-rcna105005" title="description"></iframe>
+{% endblock %}

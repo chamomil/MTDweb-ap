@@ -49,7 +49,7 @@ class ReserveTicket(generic.RedirectView):
 
             new_payment = Payment(userId=self.request.user.id, movie_session=session)
             new_payment.save()
-            return reverse("confirm_pay", new_payment.id)
+            return f'/movies/confirm_pay/{new_payment.id}'
 
 
 class ConfirmReservation(generic.DetailView):
@@ -68,7 +68,7 @@ class ConfirmationHandler(generic.RedirectView):
             else:
                 payment.status = "s"
             payment.save()
-        return reverse("movies-list")
+        return reverse_lazy("movies-list")
 
 
 class MyTickets(LoginRequiredMixin, generic.ListView):

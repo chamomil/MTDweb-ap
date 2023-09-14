@@ -36,3 +36,7 @@ class VacanciesTemplateView(TemplateView):
 
 class CouponsTemplateView(TemplateView):
     template_name = "coupons.html"
+
+
+class AdditionalTemplateView(TemplateView):
+    template_name = "additional.html"
