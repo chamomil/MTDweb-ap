@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contacts{% endblock %}
+{% block content %}
+    <h2>Additional page</h2>
+    <code>
+        int a = 0;
+        std::cout << ++a;
+        for (int i = 0; i < 10; ++i) {
+        a *= i;
+        }
+        std::cout << ++a;
+    </code>
+    <br>
+    <audio controls autoplay muted>
+        <source src="{% static "audio/zvuk-barabannoj-drobi.mp3" %}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <iframe src="https://www.nbcnews.com/news/world/mv-ocean-explore-covid-luxury-cruise-ship-ran-aground-rcna105005"
+            title="description"></iframe>
+    <p>The sun cast a warm, golden glow over the tranquil meadow as birds chirped in the distance. In a bustling city,
+        people hurriedly walked along the crowded streets, lost in their own thoughts. The aroma of freshly baked bread
+        wafted through the air, enticing passersby to enter the quaint bakery.<wbr> A brilliant rainbow arched across the sky
+        after a refreshing rain shower, bringing smiles to onlookers' faces. The old library was a treasure trove of
+        knowledge, its shelves filled with dusty books waiting to be explored by curious minds.</p>
+    <br>
+    <a href="https://www.dwsamplefiles.com/?dl_id=176" download>Click here to download the text file</a>
+    <br>
+    <select name="select">
+        <option value="value1">Value1</option>
+        <option value="value2">Value2</option>
+    </select>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Feedbacks{% endblock %}
+
+{% block content %}
+    <a href="{% url 'feedback-create' %}">New feedback</a>
+    <section itemscope itemtype="https://schema.org/ItemList">
+        {% if not feedback_list %}
+            <p>No feedbacks</p>
+        {% endif %}
+        {% for feedback in feedback_list %}
+            <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Review">
+                <h2 itemprop="name">{{ feedback.title }}</h2>
+                <meta itemprop="reviewRating" content="{{ feedback.rating }}">
+                <h3>
+                    Author: <span itemprop="author">{{ feedback.author }}</span> -
+                    <time itemprop="datePublished">{{ feedback.created_at }}</time>
+                </h3>
+                <p itemprop="reviewBody">{{ feedback.content }}</p>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}

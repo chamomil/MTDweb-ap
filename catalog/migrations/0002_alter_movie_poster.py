@@ -12,6 +12,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="movie",
             name="poster",
-            field=models.ImageField(upload_to="catalog/images/"),
+            field=models.ImageField(upload_to="catalog/logos/"),
         ),
     ]

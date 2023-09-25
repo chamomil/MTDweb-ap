@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Article List{% endblock %}
+
+{% block content %}
+    <hr>
+    {% for article in object_list %}
+        <article>
+            <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
+            <img src="{{ article.article_image.url }}" alt="article poster" height="200">
+            <p>{{ article.description }}... <a href="{{ article.get_absolute_url }}">Read more</a></p>
+            <hr>
+        </article>
+    {% endfor %}
+{% endblock %}

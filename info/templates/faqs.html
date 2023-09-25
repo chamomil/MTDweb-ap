@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}FAQs{% endblock %}
+{% block content %}
+    <article itemscope itemtype="https://schema.org/FAQPage">
+        <h1 itemprop="name">Frequently Asked Questions</h1>
+        <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <summary><strong itemprop="name">What are the ticket prices at CineMagic Cinema?</strong></summary>
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">Ticket prices may vary depending on factors such as movie format, showtime, and
+                    promotions. We offer competitive pricing options, and you can find detailed information on ticket
+                    prices on our website or at the cinema box office.</p>
+            </div>
+        </details>
+        <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <summary><strong itemprop="name">How do I purchase tickets?</strong></summary>
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">You can purchase tickets online through our website or at the cinema box office.
+                    Online ticketing provides a convenient way to select your preferred showtime and make secure
+                    payments.</p>
+            </div>
+        </details>
+        <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <summary><strong itemprop="name">What are the food and beverage options available at CineMagic?</strong>
+            </summary>
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">At CineMagic, we have a concession stand offering a wide variety of delicious snacks,
+                    popcorn, beverages, candies, and more. Refreshments can be enjoyed in our theater during the movie
+                    for an enhanced movie-watching experience.</p>
+            </div>
+        </details>
+        <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <summary><strong itemprop="name">Does CineMagic offer private screenings or events for groups?</strong>
+            </summary>
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes, we offer private screenings and events for groups, which can be tailored to suit
+                    various occasions such as birthdays, corporate gatherings, school outings, and more. You can contact
+                    our events team for more information on booking private screenings.</p>
+            </div>
+        </details>
+        <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <summary><strong itemprop="name">What are the parking facilities at CineMagic?</strong></summary>
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">We provide convenient parking facilities for our cinema patrons. Please follow the
+                    instructions provided at the cinema location for parking details and availability.</p>
+            </div>
+        </details>
+        <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <summary><strong itemprop="name">Are outside snacks or drinks allowed in the cinema?</strong></summary>
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">Outside snacks and drinks are generally not permitted, as we have a wide range of
+                    delicious concessions available for purchase. However, if you have specific dietary restrictions or
+                    requirements, kindly reach out to our customer service for further assistance.</p>
+            </div>
+        </details>
+    </article>
+{% endblock %}

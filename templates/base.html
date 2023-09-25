@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Movies, tickets, News"/>
+    <meta name="description" content="Movies web application"/>
+    <meta name="author" content="Makaranka Aliona"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'logos/cinema_logo.png' %}">
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+
+<body>
+<header>
+    <h1>CineMagic</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'article-list' %}">News</a></li>
+            <li><a href="{% url 'movies-list' %}">Movies</a></li>
+            <li><a href="{% url 'my_tickets' %}">My tickets</a></li>
+            <li><a href="{% url 'faqs' %}">FAQs</a></li>
+            <li><a href="{% url 'feedback-list' %}">Feedbacks</a></li>
+            <li><a href="{% url 'privacy-policy' %}">Privacy policy</a></li>
+            <li><a href="{% url 'about-us' %}">About us</a></li>
+            <li><a href="{% url 'contacts' %}">Contacts</a></li>
+            <li><a href="{% url 'vacancies' %}">Vacancies</a></li>
+            <li><a href="{% url 'coupons' %}">Coupons and discount codes</a></li>
+            <li><a href="{% url 'additional' %}">Additional</a></li>
+        </ul>
+    </nav>
+</header>
+<p>
+    {% if user.is_authenticated %}
+        Hello, {{ user.get_username }}!
+        <a href="{% url 'logout' %}">Log out</a>
+    {% else %}
+        <a href="{% url 'sign_up' %}">Sign up</a>
+        <a href="{% url 'login' %}">Sign in</a>
+    {% endif %}
+</p>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+</body>
+</html>

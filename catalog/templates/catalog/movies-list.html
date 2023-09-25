@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+    <br>
+    <section itemscope itemtype="https://schema.org/Movie">
+        <h2 itemprop="name">Movies</h2>
+        <form action="{% url 'movies-list' %}" method="get">
+            <input name="search" type="text" placeholder="Search..." {% if search %} value="{{ search }}"{% endif %}>
+            <input name="genre" type="text" placeholder="Search by genre..." {% if genre %} value="{{ genre }}"{% endif %}>
+            <button type="submit">Search</button>
+        </form>
+        {% if movies_list %}
+            {% for movie in movies_list %}
+                {% if movie.moviesession_set.count != 0 %}
+                    <article itemprop="about" itemscope itemtype="https://schema.org/Article">
+                        <h3 itemprop="name"><a href="{% url 'movie-details' movie.id %}" itemprop="url">{{ movie.title }}</a></h3>
+                        <meta itemprop="description" content="{{ movie.description }}">
+                        <p>Genre:
+                            <span itemprop="genre">
+                                {% for genre in movie.genre.all %}
+                                    <span itemprop="genre">{{ genre }}</span>{% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </span>
+                        </p>
+                    </article>
+                    <hr/>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <p>No movies are available.</p>
+        {% endif %}
+    </section>
+    <footer itemscope itemtype="https://schema.org/WebPage">
+        <img itemprop="image" src="{{ random_dog }}" height="200" alt="random dog">
+        <p></p>
+        <p>Random joke: <span itemprop="description">{{ random_joke }}</span></p>
+    </footer>
+{% endblock %}

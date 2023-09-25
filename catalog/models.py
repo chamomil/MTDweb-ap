@@ -26,8 +26,8 @@ class MovieSession(models.Model):
 
     def is_valid(self):
         return (
-            self.date >= timezone.now().date()
-            and self.payment_set.count() < self.lounge.capacity
+                self.date >= timezone.now().date()
+                and self.payment_set.count() < self.lounge.capacity
         )
 
     def __str__(self):
