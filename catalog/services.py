@@ -12,6 +12,6 @@ def get_random_dog():
 
 
 def get_random_joke():
-    return
     # response = requests.get("https://icanhazdadjoke.com", headers={'Accept': 'application/json'}).json()
     # return response.get('joke')
+    return

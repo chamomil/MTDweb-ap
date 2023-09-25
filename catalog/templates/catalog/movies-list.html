@@ -4,7 +4,7 @@
     <br>
     <section itemscope itemtype="https://schema.org/Movie">
         <h2 itemprop="name">Movies</h2>
-        <form action="{% url 'sign_up' %}" method="get">
+        <form action="{% url 'movies-list' %}" method="get">
             <input name="search" type="text" placeholder="Search..." {% if search %} value="{{ search }}"{% endif %}>
             <input name="genre" type="text" placeholder="Search by genre..." {% if genre %} value="{{ genre }}"{% endif %}>
             <button type="submit">Search</button>
