@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="85966ddc-9007-4e5e-9f28-c89d9b5168ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/templates/catalog/movies-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/templates/catalog/movies-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/templates/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/about-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/templates/additional.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/additional.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -47,7 +43,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lab__1&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lab__2&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/alyona/bsuir/5sem/mtdweb-ap/cinema/static/text&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -120,6 +116,12 @@
       <workItem from="1695373474710" duration="225000" />
       <workItem from="1695380011320" duration="4339000" />
       <workItem from="1695629885482" duration="17000" />
+      <workItem from="1695661020724" duration="1430000" />
+      <workItem from="1695664851838" duration="1874000" />
+      <workItem from="1695715078073" duration="609000" />
+      <workItem from="1695717306286" duration="3160000" />
+      <workItem from="1695733208827" duration="3474000" />
+      <workItem from="1695753194276" duration="893000" />
     </task>
     <servers />
   </component>

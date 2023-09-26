@@ -9,6 +9,7 @@
     <meta name="author" content="Makaranka Aliona"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" type="image/png" href="{% static 'logos/cinema_logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>{% block title %}Home{% endblock %}</title>
 </head>
 
@@ -31,20 +32,19 @@
             <li><a href="{% url 'additional' %}">Additional</a></li>
         </ul>
     </nav>
-</header>
-<p>
     {% if user.is_authenticated %}
-        Hello, {{ user.get_username }}!
         <a href="{% url 'logout' %}">Log out</a>
     {% else %}
         <a href="{% url 'sign_up' %}">Sign up</a>
         <a href="{% url 'login' %}">Sign in</a>
     {% endif %}
-</p>
+</header>
 <main>
     {% block content %}
     {% endblock %}
 </main>
-
+<footer>
+    <p>© CineMagic 2022-2023</p>
+</footer>
 </body>
 </html>
