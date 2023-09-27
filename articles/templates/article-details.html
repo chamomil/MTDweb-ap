@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 
+{% block style %}<link rel="stylesheet" href="{% static 'css/article_details.css' %}">{% endblock %}
 {% block title %}Article details{% endblock %}
 
 {% block content %}
-    <h2>{{ object.title }}</h2>
-    <h3>{{ object.description }}</h3>
-    <img src="{{ article.article_image.url }}" alt="article poster" height="400">
-    <p>{{ object.content }}</p>
-    <p><a href="{% url 'article-list' %}">Back to the news</a></p>
+    <div id="article">
+        <h2 id="article_name">{{ object.title }}</h2>
+        <h3 id="article_description">{{ object.description }}</h3>
+        <img src="{{ article.article_image.url }}" alt="article poster">
+        <p id="article_text">{{ object.content }}</p>
+        <p id="back"><a href="{% url 'article-list' %}">Back to the news</a></p>
+    </div>
 {% endblock %}
