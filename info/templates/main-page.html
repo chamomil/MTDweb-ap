@@ -1,52 +1,63 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">{% endblock %}
 {% block title %}Main page{% endblock %}
 
 {% block content %}
-    <article itemscope itemtype="https://schema.org/Article">
-        <h1 itemprop="headline">Last article: <a href="{{ last_article.get_absolute_url }}">{{ last_article.title }}</a></h1>
+    <article itemscope itemtype="https://schema.org/Article" id="last_article">
+        <h2 itemprop="headline">Last article: <a href="{{ last_article.get_absolute_url }}">{{ last_article.title }}</a>
+        </h2>
+    </article>
+    <section class="banner">
         <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
             <img alt="Advertising banner for a website: how to make it yourself"
                  data-src="https://romi.center/wp-content/uploads/2020/09/Яндекс-Директ-баннеры.png"
                  src="https://romi.center/wp-content/uploads/2020/09/Яндекс-Директ-баннеры.png"
                  height="300" width="600" itemprop="contentUrl">
         </figure>
-        <p itemprop="description">Read also</p>
-        <p itemprop="articleBody">Yandex.Direct banners: advantages and nuances of creation</p>
-        <p>What is a banner? A static or dynamic image or video ad that contains information about a product or service
-            and sends the user to the advertiser's website …</p>
-        <a href="https://romi.center/ru/learning/article/yandeks-direkt-banneri-preimushtestva-i/" class="read_more"
-           itemprop="url">
-            More
-        </a>
-    </article>
-    <section>
+        <section class="banner_info">
+            <p itemprop="description" id="banner_read_also">Read also</p>
+            <h3 itemprop="articleBody" id="banner_description">Yandex.Direct banners: advantages and nuances of creation</h3>
+            <p id="banner_text">What is a banner? A static or dynamic image or video ad that contains information about a product or
+                service
+                and sends the user to the advertiser's website …</p>
+            <a href="https://romi.center/ru/learning/article/yandeks-direkt-banneri-preimushtestva-i/" class="read_more"
+               itemprop="url" id="banner_more">
+                More
+            </a>
+        </section>
+    </section>
+
+    <section id="partners">
         <h3>Our partners</h3>
-        <div itemscope itemtype="https://schema.org/Organization">
-            <a href="https://sosedi.by/" itemprop="url">
-                <img alt="sosedi" src="{% static 'logos/sosedi.png' %}" height="100" width="100" itemprop="logo">
-                <span itemprop="name">Sosedi</span>
-            </a>
-        </div>
-        <div itemscope itemtype="https://schema.org/Organization">
-            <a href="https://sherlockcoffeehall.business.site/" itemprop="url">
-                <img alt="sherlock coffee hall" src="{% static 'logos/sherlock.png' %}" height="100" width="100"
-                     itemprop="logo">
-                <span itemprop="name">Sherlock Coffee Hall</span>
-            </a>
-        </div>
-        <div itemscope itemtype="https://schema.org/Organization">
-            <a href="https://github.com/" itemprop="url">
-                <img alt="github" src="{% static 'logos/github.png' %}" height="100" width="100" itemprop="logo">
-                <span itemprop="name">GitHub</span>
-            </a>
-        </div>
-        <div itemscope itemtype="https://schema.org/Organization">
-            <a href="https://www.w3schools.com/" itemprop="url">
-                <img alt="w3schools" src="{% static 'logos/w3schools.png' %}" height="100" width="100" itemprop="logo">
-                <span itemprop="name">W3Schools</span>
-            </a>
+        <div id="partners_icons">
+            <div itemscope itemtype="https://schema.org/Organization">
+                <a href="https://sosedi.by/" itemprop="url" id="partner">
+                    <img alt="sosedi" src="{% static 'logos/sosedi.png' %}" height="100" width="100" itemprop="logo">
+                    <span itemprop="name">Sosedi</span>
+                </a>
+            </div>
+            <div itemscope itemtype="https://schema.org/Organization">
+                <a href="https://sherlockcoffeehall.business.site/" itemprop="url" id="partner">
+                    <img alt="sherlock coffee hall" src="{% static 'logos/sherlock.png' %}" height="100" width="100"
+                         itemprop="logo">
+                    <span itemprop="name">Sherlock Coffee Hall</span>
+                </a>
+            </div>
+            <div itemscope itemtype="https://schema.org/Organization">
+                <a href="https://github.com/" itemprop="url" id="partner">
+                    <img alt="github" src="{% static 'logos/github.png' %}" height="100" width="100" itemprop="logo">
+                    <span itemprop="name">GitHub</span>
+                </a>
+            </div>
+            <div itemscope itemtype="https://schema.org/Organization">
+                <a href="https://www.w3schools.com/" itemprop="url" id="partner">
+                    <img alt="w3schools" src="{% static 'logos/w3schools.png' %}" height="100" width="100"
+                         itemprop="logo">
+                    <span itemprop="name">W3Schools</span>
+                </a>
+            </div>
         </div>
     </section>
 {% endblock %}
