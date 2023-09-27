@@ -3,6 +3,7 @@ body {
     width: 100%;
     background-size: cover;
     background-color: #D9E2E7;
+    min-height: 100vh;
 }
 
 header {
@@ -65,13 +66,7 @@ footer {
     color: white;
     margin: 0;
     padding: 10px;
-}
-
-main {
-    padding: 50px 30px 30px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    grid-row-gap: 50px;
-    grid-auto-rows: minmax(100px, auto);
+    position: relative;
+    left: 0;
+    bottom: 0;
 }

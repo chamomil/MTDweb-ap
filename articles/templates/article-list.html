@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">{% endblock %}
 {% block title %}Article List{% endblock %}
 
 {% block content %}
-    <hr>
     {% for article in object_list %}
-        <article>
+        <article id="article">
+            <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject" id="article_img">
+                <img alt="article poster" data-src="{{ article.article_image.url }}"
+                     src="{{ article.article_image.url }}" itemprop="contentUrl">
+            </figure>
             <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
-            <img src="{{ article.article_image.url }}" alt="article poster" height="200">
-            <p>{{ article.description }}... <a href="{{ article.get_absolute_url }}">Read more</a></p>
-            <hr>
+            <p>{{ article.description }}... <b><a href="{{ article.get_absolute_url }}">Read more</a></b></p>
         </article>
     {% endfor %}
 {% endblock %}
