@@ -7,12 +7,17 @@ body {
 }
 
 header {
+    z-index: 2;
     display: flex;
     background-color: #120F26;
     color: white;
     justify-content: space-between;
     background-size: cover;
     background-position: top center;
+    position: sticky;
+    width: 100%;
+    left: 0;
+    top: 0;
 
     & h1 {
         padding-left: 30px;

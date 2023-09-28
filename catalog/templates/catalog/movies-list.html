@@ -1,38 +1,48 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/movies.css' %}">{% endblock %}
 {% block title %}Home Page{% endblock %}
 {% block content %}
     <br>
     <section itemscope itemtype="https://schema.org/Movie">
         <h2 itemprop="name">Movies</h2>
-        <form action="{% url 'movies-list' %}" method="get">
+        <form action="{% url 'movies-list' %}" method="get" id="search_group">
             <input name="search" type="text" placeholder="Search..." {% if search %} value="{{ search }}"{% endif %}>
-            <input name="genre" type="text" placeholder="Search by genre..." {% if genre %} value="{{ genre }}"{% endif %}>
+            <input name="genre" type="text" placeholder="Search by genre..." {% if genre %}
+                   value="{{ genre }}"{% endif %}>
             <button type="submit">Search</button>
         </form>
-        {% if movies_list %}
-            {% for movie in movies_list %}
-                {% if movie.moviesession_set.count != 0 %}
-                    <article itemprop="about" itemscope itemtype="https://schema.org/Article">
-                        <h3 itemprop="name"><a href="{% url 'movie-details' movie.id %}" itemprop="url">{{ movie.title }}</a></h3>
-                        <meta itemprop="description" content="{{ movie.description }}">
-                        <p>Genre:
-                            <span itemprop="genre">
+        <div id="movies_list">
+            {% if movies_list %}
+                {% for movie in movies_list %}
+                    {% if movie.moviesession_set.count != 0 %}
+                        <article itemprop="about" itemscope itemtype="https://schema.org/Article" id="movie">
+                            <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject" id="poster">
+                                <img alt="movie poster" data-src="{{ movie.poster }}" src="{{ movie.poster }}"
+                                     itemprop="contentUrl">
+                            </figure>
+                            <h3 itemprop="name"><a href="{% url 'movie-details' movie.id %}"
+                                                   itemprop="url">{{ movie.title }}</a></h3>
+                            <meta itemprop="description" content="{{ movie.description }}">
+                            <p>Genre:
+                                <span itemprop="genre">
                                 {% for genre in movie.genre.all %}
                                     <span itemprop="genre">{{ genre }}</span>{% if not forloop.last %}, {% endif %}
                                 {% endfor %}
                             </span>
-                        </p>
-                    </article>
-                    <hr/>
-                {% endif %}
-            {% endfor %}
-        {% else %}
-            <p>No movies are available.</p>
-        {% endif %}
+                            </p>
+                        </article>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <p>No movies are available.</p>
+            {% endif %}
+        </div>
     </section>
-    <footer itemscope itemtype="https://schema.org/WebPage">
-        <img itemprop="image" src="{{ random_dog }}" height="200" alt="random dog">
-        <p></p>
-        <p>Random joke: <span itemprop="description">{{ random_joke }}</span></p>
-    </footer>
+    {#    <footer itemscope itemtype="https://schema.org/WebPage">#}
+    {#        <img itemprop="image" src="{{ random_dog }}" height="200" alt="random dog">#}
+    {#        <p></p>#}
+    {#        <p>Random joke: <span itemprop="description">{{ random_joke }}</span></p>#}
+    {#    </footer>#}
 {% endblock %}
