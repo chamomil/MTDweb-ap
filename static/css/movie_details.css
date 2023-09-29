@@ -49,6 +49,10 @@ main {
     font-size: 18px;
 }
 
+#tickets button:hover {
+    background-color: #3f3485;
+}
+
 #tickets form {
     align-self: center;
 }
