@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="85966ddc-9007-4e5e-9f28-c89d9b5168ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/templates/catalog/movies-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/templates/catalog/movies-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/templates/catalog/movie-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/templates/catalog/movie-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +128,8 @@
       <workItem from="1695815339189" duration="13452000" />
       <workItem from="1695840708485" duration="2265000" />
       <workItem from="1695887925451" duration="3095000" />
-      <workItem from="1695898924066" duration="1740000" />
+      <workItem from="1695898924066" duration="5036000" />
+      <workItem from="1695977928516" duration="2031000" />
     </task>
     <servers />
   </component>

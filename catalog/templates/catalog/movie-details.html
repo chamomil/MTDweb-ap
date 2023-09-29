@@ -1,51 +1,54 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/movie_details.css' %}">{% endblock %}
 {% block title %}Home Page{% endblock %}
 {% block content %}
-    <section itemscope itemtype="https://schema.org/Movie">
+    <section itemscope itemtype="https://schema.org/Movie" id="movie_details">
         <img itemprop="image" src="{{ movie.poster.url }}" alt="poster" height="600">
-        <h1 itemprop="name">{{ movie.title }}</h1>
-        <p>Year: <span itemprop="datePublished">{{ movie.year_of_production }}</span></p>
-        <p>Duration: <span itemprop="duration">{{ movie.duration }}</span></p>
-        <p>Country: <span itemprop="countryOfOrigin">{{ movie.country }}</span></p>
-        <p>IMDb score: <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"><span
-                itemprop="ratingValue">{{ movie.rating }}</span></span></p>
-        <p>Budget: <span itemprop="budget">{{ movie.budget }}</span></p>
-        <p>Genre:
-            <span itemprop="genre">
+        <div id="movie_details_info">
+            <h1 itemprop="name">{{ movie.title }}</h1>
+            <p>Year: <span itemprop="datePublished">{{ movie.year_of_production }}</span></p>
+            <p>Duration: <span itemprop="duration">{{ movie.duration }}</span></p>
+            <p>Country: <span itemprop="countryOfOrigin">{{ movie.country }}</span></p>
+            <p>IMDb score: <span itemprop="aggregateRating" itemscope
+                                 itemtype="https://schema.org/AggregateRating"><span
+                    itemprop="ratingValue">{{ movie.rating }}</span></span></p>
+            <p>Budget: <span itemprop="budget">{{ movie.budget }}</span></p>
+            <p>Genre:
+                <span itemprop="genre">
                 {% for ganr in movie.genre.all %}
                     <span>{{ ganr }}</span>{% if not forloop.last %}, {% endif %}
                 {% endfor %}
             </span>
-        </p>
-        <p itemprop="description">{{ movie.description }}</p>
+            </p>
+            <p itemprop="description">{{ movie.description }}</p>
+        </div>
     </section>
-    <section itemscope itemtype="https://schema.org/Event">
+    <section itemscope itemtype="https://schema.org/Event" id="available_sessions">
         <h2 itemprop="name">Available Movie Sessions</h2>
-    <hr>
-        {% if movie.moviesession_set.count == 0 %}
-            <p>No sessions are available</p>
-        {% endif %}
-        {% for session in movie.moviesession_set.all %}
-            {% if session.is_valid %}
-                <article itemprop="subEvent" itemscope itemtype="https://schema.org/ScreeningEvent">
-                    <p><span itemprop="startDate" content="{{ session.date }}">{{ session.date }}</span></p>
-                    <p>Lounge <span itemprop="location" itemscope itemtype="https://schema.org/Place"><span
-                            itemprop="name">{{ session.lounge }}</span></span></p>
-                    <p>Time the movie starts: <span itemprop="startDate"
-                                                    content="{{ session.time_begin }}">{{ session.time_begin }}</span>
-                    </p>
-                    <p>Price <span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span
-                            itemprop="priceCurrency" content="USD">$</span><span
-                            itemprop="price">{{ session.price_per_ticket }}</span></span></p>
-                    <form action="{% url 'reserve_ticket' %}" method="post">
-                        {% csrf_token %}
-                        <input id="id_session_id" name="session_id" type="number" value="{{ session.id }}"
-                               hidden="hidden"/>
-                        <button type="submit">Buy ticket</button>
-                    </form>
-                </article>
-                <hr>
-            {% endif %}
-        {% endfor %}
+        <div class="all_tickets">
+            {% for session in movie.moviesession_set.all %}
+                {% if session.is_valid %}
+                    <article itemprop="subEvent" itemscope itemtype="https://schema.org/ScreeningEvent" id="tickets">
+                        <p><span itemprop="startDate" content="{{ session.date }}">{{ session.date }}</span></p>
+                        <p>Lounge <span itemprop="location" itemscope itemtype="https://schema.org/Place"><span
+                                itemprop="name">{{ session.lounge }}</span></span></p>
+                        <p>Time the movie starts: <span itemprop="startDate"
+                                                        content="{{ session.time_begin }}">{{ session.time_begin }}</span>
+                        </p>
+                        <p>Price <span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span
+                                itemprop="priceCurrency" content="USD">$</span><span
+                                itemprop="price">{{ session.price_per_ticket }}</span></span></p>
+                        <form action="{% url 'reserve_ticket' %}" method="post">
+                            {% csrf_token %}
+                            <input id="id_session_id" name="session_id" type="number" value="{{ session.id }}"
+                                   hidden="hidden"/>
+                            <button type="submit">Buy ticket</button>
+                        </form>
+                    </article>
+                {% endif %}
+            {% endfor %}
+        </div>
     </section>
 {% endblock %}
