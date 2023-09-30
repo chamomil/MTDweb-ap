@@ -12,6 +12,11 @@
     grid-row-gap: 5px;
 }
 
+#article_text {
+    column-count: 2;
+    column-gap: 20px;
+}
+
 div[id="article"] {
     background-color: white;
     margin: 30px;

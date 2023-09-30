@@ -21,7 +21,7 @@
         transform: skewX(0grad);
     }
     to {
-        transform: skewX(90grad) translateX(500px);
+        transform: skewX(45grad) translateX(500px);
     }
 }
 
