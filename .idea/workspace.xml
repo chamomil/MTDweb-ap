@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85966ddc-9007-4e5e-9f28-c89d9b5168ea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/cinema.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cinema.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/templates/article-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/articles/templates/article-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/templates/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/about-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/news.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/news.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,6 +136,7 @@
       <workItem from="1696056577626" duration="1932000" />
       <workItem from="1696075304933" duration="10946000" />
       <workItem from="1696099366564" duration="1259000" />
+      <workItem from="1696108705272" duration="416000" />
     </task>
     <servers />
   </component>

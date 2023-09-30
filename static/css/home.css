@@ -87,13 +87,14 @@ main {
     font-size: 19px;
     font-family: "barlow", serif;
 
-    & h3 {
-        font-size: 25px;
-    }
+}
 
-    & a {
-        color: #2d79c5;
-    }
+.banner_info h3 {
+    font-size: 25px;
+}
+
+.banner_info a {
+    color: #2d79c5;
 }
 
 #banner_read_also {
@@ -101,9 +102,8 @@ main {
     font-size: 24px;
     width: fit-content;
     position: relative;
-    animation:
-            6s linear 0s infinite alternate read_also_transform,
-            10s linear 0s infinite read_also_animation;
+    animation: 6s linear 0s infinite alternate read_also_transform,
+    10s linear 0s infinite read_also_animation;
 }
 
 

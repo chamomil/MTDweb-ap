@@ -22,52 +22,51 @@ header {
     width: 100%;
     left: 0;
     top: 0;
+}
 
-    & h1 {
-        padding-left: 30px;
-        font-size: 45px;
-        font-family: "Barlow", serif;
-        font-kerning: normal;
-    }
+header h1 {
+    padding-left: 30px;
+    font-size: 45px;
+    font-family: "Barlow", serif;
+    font-kerning: normal;
+}
 
-    & ul {
-        display: flex;
-        list-style-type: none;
-        margin: 0;
-        height: 100%;
-    }
+header ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    height: 100%;
+}
 
-    & li {
-        display: flex;
-        align-items: center;
-        background-color: #120F26;
-        height: 100%;
-    }
+header li {
+    display: flex;
+    align-items: center;
+    background-color: #120F26;
+    height: 100%;
+}
 
-    & li a {
-        padding: 14px 16px;
-        border-right: 1px solid #9a9a9a;
-        height: 40%;
-    }
+header li a {
+    padding: 14px 16px;
+    border-right: 1px solid #9a9a9a;
+    height: 40%;
+}
 
-    & li:hover {
-        background-color: #282154;
-    }
+header li:hover {
+    background-color: #282154;
+}
 
+header a {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    text-decoration: none;
+    font-size: 17px;
+}
 
-    & a {
-        color: white;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        padding: 0 30px;
-        text-decoration: none;
-        font-size: 17px;
-    }
-
-    & a:hover {
-        background-color: #282154;
-    }
+header a:hover {
+    background-color: #282154;
 }
 
 footer {
@@ -82,6 +81,3 @@ footer {
     bottom: 0;
 }
 
-main {
-    width: 100%;
-}
