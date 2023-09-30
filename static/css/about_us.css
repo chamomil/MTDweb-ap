@@ -1,0 +1,28 @@
+@keyframes roll {
+    0% {
+        transform: rotate(0) skewX(10grad);
+    }
+    100% {
+        transform: rotate(360deg) skewX(10grad);
+    }
+}
+
+#logo {
+    height: 300px;
+    width: 300px;
+    animation: roll 3s 1;
+    transform: skewX(10grad);
+}
+
+.about_us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about_us nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
