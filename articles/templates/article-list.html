@@ -5,7 +5,8 @@
 {% block title %}Article List{% endblock %}
 
 {% block content %}
-    {% for article in object_list %}
+    <div id="news">
+        {% for article in object_list %}
         <article id="article">
             <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject" id="article_img">
                 <img alt="article poster" data-src="{{ article.article_image.url }}"
@@ -15,4 +16,5 @@
             <p>{{ article.description }}... <b><a href="{{ article.get_absolute_url }}">Read more</a></b></p>
         </article>
     {% endfor %}
+    </div>
 {% endblock %}

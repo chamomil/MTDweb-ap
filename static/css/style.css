@@ -1,3 +1,7 @@
+* {
+    font-family: Barlow, serif;
+}
+
 body {
     margin: 0;
     width: 100%;
@@ -21,8 +25,9 @@ header {
 
     & h1 {
         padding-left: 30px;
-        font-family: Rekha, serif;
         font-size: 45px;
+        font-family: "Barlow", serif;
+        font-kerning: normal;
     }
 
     & ul {
@@ -71,6 +76,7 @@ footer {
     color: white;
     margin: 0;
     padding: 10px;
+    justify-self: end;
     position: relative;
     left: 0;
     bottom: 0;

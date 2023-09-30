@@ -1,4 +1,4 @@
-main {
+#news {
     padding: 50px 30px 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -15,6 +15,12 @@ main {
     transition: 0.3s;
     flex-wrap: wrap;
     flex-direction: column;
+    font-size: 18px;
+}
+
+#article p {
+    overflow: hidden;
+    height: 20px;
 }
 
 #article:hover {
