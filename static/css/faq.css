@@ -1,0 +1,31 @@
+#faq {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 50px 30px 30px;
+}
+
+#faq h2 {
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    color: #1f1a42;
+}
+
+#questions {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+    width: 60%;
+    font-size: 18px;
+}
+
+details {
+    width: fit-content;
+}
+
+.question_date {
+    color: #3f3485;
+}
