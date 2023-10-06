@@ -40,8 +40,6 @@ main {
     margin-left: 50px;
     background-color: #7FACD9;
     height: fit-content;
-    position: relative;
-    top: 0;
     box-shadow: 0 5px 15px rgba(157, 184, 245, 96);
     color: white;
 }
@@ -98,7 +96,6 @@ main {
 }
 
 #banner_read_also {
-    /*color: #7FACD9;*/
     font-size: 24px;
     width: fit-content;
     position: relative;

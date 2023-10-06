@@ -56,11 +56,14 @@
     grid-row: 1;
     font-size: 24px;
     color: #1f1a42;
+    font-variant: small-caps;
 }
 
 .about_us_intro p {
     grid-column: 2/4;
     grid-row: 2;
+    word-spacing: 8px;
+    line-height: 30px;
 }
 
 #desc {
@@ -69,6 +72,12 @@
     padding: 20px 40px;
     font-size: 18px;
     margin-bottom: 35px;
+    text-indent: 25px;
+    word-break: break-all;
+}
+
+#desc em {
+    letter-spacing: 4px;
 }
 
 #hist {
@@ -90,6 +99,10 @@
     background-color: white;
     margin: 20px;
     padding: 20px 40px;
+}
+
+#hist h3 {
+    text-transform: uppercase;
 }
 
 video {
