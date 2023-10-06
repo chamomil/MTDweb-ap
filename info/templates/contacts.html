@@ -23,11 +23,13 @@
         {% endfor %}
     </div>
     <table border="1">
+        <caption>Таблица информации о работниках</caption>
         <thead>
         <tr>
             <th id="header1">ID</th>
             <th id="header2">Name</th>
             <th id="header3" colspan="2">Details</th>
+            <th id="header3">Empty</th>
         </tr>
         </thead>
         <tbody>
@@ -37,6 +39,7 @@
                 <td headers="header2">{{ worker.first_name }} {{ worker.last_name }}</td>
                 <td headers="header3">{{ worker.email_address }}</td>
                 <td headers="header3">{{ worker.job_role }}</td>
+                <td headers="header4"></td>
             </tr>
         {% endfor %}
         </tbody>

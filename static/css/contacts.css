@@ -5,7 +5,7 @@
 }
 
 main h2 {
-    font-size: 26px;
+    font-size: 30px;
     padding-top: 40px;
     padding-bottom: 30px;
     text-align: center;
@@ -23,8 +23,39 @@ main h2 {
     align-items: center;
 }
 
+.worker_info {
+    width: 40%;
+}
+
 .worker img {
     height: 300px;
     width: 200px;
     border-radius: 20px;
+}
+
+table {
+    border: 2px solid #1f1a42;
+    border-collapse: collapse;
+    font-size: 18px;
+    margin: 30px 30px 50px;
+    background-color: white;
+}
+
+caption {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+td:empty {
+    background-color: #2d79c5;
+}
+
+td, th {
+    padding: 15px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
