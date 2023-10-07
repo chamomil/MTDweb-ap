@@ -2,3 +2,7 @@
     position: fixed;
     top:80%;
 }
+
+li {
+    list-style-type: '⚡';
+}

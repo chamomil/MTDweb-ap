@@ -2,6 +2,19 @@
     font-family: Barlow, serif;
 }
 
+p::selection {
+    background-color: #7FACD9;
+    color: white;
+}
+
+main a:hover {
+    color: #2AA5A0;
+}
+
+main a:visited {
+    color: #a671d7;
+}
+
 body {
     margin: 0;
     width: 100%;

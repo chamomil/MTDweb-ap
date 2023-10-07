@@ -39,6 +39,11 @@ p[id^="article_t"] {
     grid-row: 3/5;
 }
 
+p[id^="article_t"]:first-letter {
+    font-size: 24px;
+    color: #7FACD9;
+}
+
 #back {
     grid-column: 2;
     grid-row: 5;
