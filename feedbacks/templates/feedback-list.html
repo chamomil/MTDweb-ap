@@ -7,7 +7,9 @@
 
 {% block content %}
     <h2>Feedbacks</h2>
-    <a href="{% url 'feedback-create' %}">New feedback</a>
+    <form action="{% url 'feedback-create' %}">
+        <button type="submit">New feedback</button>
+    </form>
     <section itemscope itemtype="https://schema.org/ItemList">
         {% if not feedback_list %}
             <p>No feedbacks</p>

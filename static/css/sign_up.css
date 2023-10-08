@@ -24,3 +24,8 @@ form > button {
 form > button:hover {
     background-color: #3f3485;
 }
+
+h2 {
+    text-align: center;
+    margin: 30px;
+}
