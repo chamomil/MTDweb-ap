@@ -1,0 +1,19 @@
+.coupon {
+    background-color: white;
+    padding: 30px;
+    margin: 30px;
+    width: 50%;
+    font-size: 18px;
+}
+
+#coupons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+
+#coupons > h2 {
+    font-size: 30px;
+}
