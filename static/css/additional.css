@@ -5,4 +5,17 @@
 
 li {
     list-style-type: '⚡';
+    width: fit-content;
+}
+
+main li:first-child {
+    background-color: #a671d7;
+}
+
+main li:last-child {
+    background-color: #2AA5A0;
+}
+
+main li:nth-child(3) {
+    background-color: #b9cb67;
 }

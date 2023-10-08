@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="85966ddc-9007-4e5e-9f28-c89d9b5168ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/templates/coupons.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/coupons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/create_feedback.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/templates/privacy-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/templates/privacy-policy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/additional.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/additional.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/contacts.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/contacts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/privacy_policy.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/privacy_policy.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/sign_up.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/sign_up.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +144,8 @@
       <workItem from="1696579620816" duration="2191000" />
       <workItem from="1696582839408" duration="9489000" />
       <workItem from="1696708060422" duration="2405000" />
-      <workItem from="1696756035587" duration="10246000" />
+      <workItem from="1696756035587" duration="11221000" />
+      <workItem from="1696787133231" duration="5924000" />
     </task>
     <servers />
   </component>
