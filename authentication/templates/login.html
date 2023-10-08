@@ -1,8 +1,23 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/sign_up.css' %}">
+{% endblock %}
 {% block title %}Login{% endblock %}
 {% block content %}
     <form method="post">
-        {% csrf_token %}{{ form.as_p }}
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <p>
+            {{ form.username.errors }}
+            <label for="{{ form.username.id_for_label }}">Username:</label>
+            {{ form.username }}
+        </p>
+        <p>
+            {{ form.password.errors }}
+            <label for="{{ form.password.id_for_label }}">Password:</label>
+            {{ form.password }}
+        </p>
         <p>Don't have an account? Create one <a href="{% url 'sign_up' %}">here</a></p>
         <button type="submit">Login</button>
     </form>
