@@ -1,15 +1,19 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/feedback_list.css' %}">
+{% endblock %}
 {% block title %}Feedbacks{% endblock %}
 
 {% block content %}
+    <h2>Feedbacks</h2>
     <a href="{% url 'feedback-create' %}">New feedback</a>
     <section itemscope itemtype="https://schema.org/ItemList">
         {% if not feedback_list %}
             <p>No feedbacks</p>
         {% endif %}
         {% for feedback in feedback_list %}
-            <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Review">
+            <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Review" class="feedback">
                 <h2 itemprop="name">{{ feedback.title }}</h2>
                 <meta itemprop="reviewRating" content="{{ feedback.rating }}">
                 <h3>
