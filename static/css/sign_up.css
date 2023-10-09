@@ -40,3 +40,15 @@ input:focus {
     font-size: 18px;
     padding: 10px;
 }
+
+textarea:optional {
+    border-color: #7FACD9;
+}
+
+input:required {
+    border-color: #a671d7;
+}
+
+input:disabled {
+    border-color: #b9cb67;
+}

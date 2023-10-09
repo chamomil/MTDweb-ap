@@ -22,7 +22,9 @@
                     Author: <span itemprop="author">{{ feedback.author }}</span> -
                     <time itemprop="datePublished">{{ feedback.created_at }}</time>
                 </h3>
-                <p itemprop="reviewBody">{{ feedback.content }}</p>
+                {% if feedback.content != "" %}
+                    <p itemprop="reviewBody">{{ feedback.content }}</p>
+                {% endif %}
             </article>
         {% endfor %}
     </section>
