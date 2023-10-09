@@ -168,3 +168,24 @@ q[lang="en"] {
     color: #3f3485;
     quotes: "«" "»";
 }
+
+@media only screen and (max-width: 1200px) {
+    .about_us_intro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #hist {
+        width: 90%;
+    }
+
+    #about_us_contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #certificate {
+        width: 90%;
+        margin-top: 20px;
+    }
+}

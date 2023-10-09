@@ -95,3 +95,9 @@ section h2 {
     height: 450px;
     transform: translate(-10%, -50%);
 }
+
+@media only screen and (max-width: 1200px) {
+    #movies_list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

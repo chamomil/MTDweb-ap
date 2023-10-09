@@ -47,3 +47,20 @@ main > h2 {
     font-size: 48px;
     animation: 5s linear 0s infinite alternate read_also_transform;
 }
+
+@media only screen and (max-width: 1200px) {
+    #vacancies {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .vacancy {
+        clear: none;
+        float: none;
+        width: 80%;
+    }
+
+    main > h2 {
+        animation: none;
+    }
+}
