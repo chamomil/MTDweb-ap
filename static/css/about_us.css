@@ -163,3 +163,8 @@ a[href="#top"]{
     padding: 20px;
     margin: 30px;
 }
+
+q[lang="en"] {
+    color: #3f3485;
+    quotes: "«" "»";
+}

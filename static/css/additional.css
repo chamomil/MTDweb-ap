@@ -1,6 +1,6 @@
 #text_additional {
     position: fixed;
-    top:80%;
+    top: 80%;
 }
 
 li {
@@ -18,4 +18,9 @@ main li:last-child {
 
 main li:nth-child(3) {
     background-color: #b9cb67;
+}
+
+input:checked {
+    border: none;
+    outline: 10px solid deeppink;
 }
