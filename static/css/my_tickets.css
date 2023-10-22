@@ -1,0 +1,39 @@
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+#ticket {
+    background-color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#ticket button {
+    padding: 20px;
+    cursor: pointer;
+    background-color: #120F26;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+#ticket button:hover {
+    background-color: #3f3485;
+}
+
+#ticket form {
+    align-self: center;
+}
+
+.all_tickets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}

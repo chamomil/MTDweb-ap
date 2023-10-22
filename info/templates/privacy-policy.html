@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/privacy_policy.css' %}">
+{% endblock %}
 {% block title %}Privacy policy{% endblock %}
 {% block content %}
-    <article itemscope itemtype="http://schema.org/WebPage">
+    <article itemscope itemtype="http://schema.org/WebPage" id="privacy">
         <meta itemprop="name" content="Privacy Policy: CINEMAGIC CINEMA">
         <meta itemprop="description"
               content="This Privacy Policy outlines how CineMagic Cinema collects, uses, and protects personal
@@ -9,7 +13,7 @@
                are committed to ensuring the privacy and confidentiality of your personal data. By using our website,
                services, and cinema facilities, you agree to the terms outlined in this policy.">
 
-        <h1>Privacy Policy: CINEMAGIC CINEMA</h1>
+        <h2>Privacy Policy: CINEMAGIC CINEMA</h2>
         <p>This Privacy Policy outlines how CineMagic Cinema collects, uses, and protects personal information obtained
             from our customers, website visitors, and individuals interacting with our cinema. We are committed to
             ensuring the privacy and confidentiality of your personal data. By using our website, services, and cinema

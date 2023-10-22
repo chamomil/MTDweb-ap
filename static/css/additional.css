@@ -1,0 +1,26 @@
+#text_additional {
+    position: fixed;
+    top: 80%;
+}
+
+li {
+    list-style-type: '⚡';
+    width: fit-content;
+}
+
+main li:first-child {
+    background-color: #a671d7;
+}
+
+main li:last-child {
+    background-color: #2AA5A0;
+}
+
+main li:nth-child(3) {
+    background-color: #b9cb67;
+}
+
+input:checked {
+    border: none;
+    outline: 10px solid deeppink;
+}

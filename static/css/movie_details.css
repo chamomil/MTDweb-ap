@@ -1,0 +1,73 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#movie_details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    grid-row-gap: 50px;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 40px;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+
+}
+
+#movie_details_info {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#movie_details img {
+    grid-row: 1/4;
+}
+
+#available_sessions h2 {
+    text-align: center;
+}
+
+#tickets {
+    background-color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#tickets button {
+    padding: 20px;
+    cursor: pointer;
+    background-color: #120F26;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+#tickets button:hover {
+    background-color: #3f3485;
+}
+
+#tickets form {
+    align-self: center;
+}
+
+.all_tickets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1200px) {
+    #movie_details {
+        display: flex;
+        flex-direction: column;
+    }
+}
+

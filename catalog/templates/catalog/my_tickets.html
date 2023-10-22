@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/my_tickets.css' %}">
+{% endblock %}
 {% block title %}Home Page{% endblock %}
 {% block content %}
     <section itemscope itemtype="https://schema.org/ItemList">
         <h2 itemprop="name">My Tickets</h2>
         {% if tickets_list %}
-            {% for ticket in tickets_list %}
-                <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Ticket">
+            <div class="all_tickets">
+                {% for ticket in tickets_list %}
+                <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Ticket" id="ticket">
                     <h2 itemprop="name">{{ ticket.movie_session.movie.title }}</h2>
                     <meta itemprop="description" content="Movie ticket for {{ ticket.movie_session.movie.title }}">
                     <p>
@@ -23,6 +28,7 @@
                     </form>
                 </article>
             {% endfor %}
+            </div>
         {% else %}
             <p>No tickets reserved yet.</p>
         {% endif %}

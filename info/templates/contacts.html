@@ -1,37 +1,47 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
+{% endblock %}
 {% block title %}Contacts{% endblock %}
 {% block content %}
     <h2>Our staff</h2>
     {% if object_list.count == 0 %}
         <p>No workers yet! Call us if you're interested!</p>
     {% endif %}
-    {% for worker in object_list %}
-        <article itemscope itemtype="https://schema.org/Person">
-            <img src="{{ worker.photo.url }}" alt="photo" height="300">
-            <p itemprop="name">{{ worker.first_name }} {{ worker.last_name }}</p>
-            <p>Job role: <span itemprop="jobTitle">{{ worker.job_role }}</span></p>
-            <p itemprop="telephone">{{ worker.phone_number }}</p>
-            <p><a href="mailto:{{ worker.email_address }}" itemprop="email">{{ worker.email_address }}</a></p>
-        </article>
-    {% endfor %}
+    <div id="workers_list">
+        {% for worker in object_list %}
+            <article itemscope itemtype="https://schema.org/Person" class="worker">
+                <img src="{{ worker.photo.url }}" alt="photo">
+                <div class="worker_info">
+                    <p itemprop="name">{{ worker.first_name }} {{ worker.last_name }}</p>
+                    <p>Job role: <span itemprop="jobTitle">{{ worker.job_role }}</span></p>
+                    <p itemprop="telephone">{{ worker.phone_number }}</p>
+                    <p><a href="mailto:{{ worker.email_address }}" itemprop="email">{{ worker.email_address }}</a></p>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
     <table border="1">
+        <caption>Таблица информации о работниках</caption>
         <thead>
-            <tr>
-                <th id="header1">ID</th>
-                <th id="header2">Name</th>
-                <th id="header3" colspan="2">Details</th>
-            </tr>
+        <tr>
+            <th id="header1">ID</th>
+            <th id="header2">Name</th>
+            <th id="header3" colspan="2">Details</th>
+            <th id="header3">Empty</th>
+        </tr>
         </thead>
         <tbody>
-            {% for worker in object_list %}
+        {% for worker in object_list %}
             <tr>
                 <td headers="header1">{{ worker.id }}</td>
                 <td headers="header2">{{ worker.first_name }} {{ worker.last_name }}</td>
                 <td headers="header3">{{ worker.email_address }}</td>
                 <td headers="header3">{{ worker.job_role }}</td>
+                <td headers="header4"></td>
             </tr>
-            {% endfor %}
+        {% endfor %}
         </tbody>
     </table>
 {% endblock %}

@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/sign_up.css' %}">
+{% endblock %}
 {% block title %}Create feedback{% endblock %}
 
 {% block content %}
     <section itemscope itemtype="https://schema.org/Review">
-        <h1>Create New Feedback</h1>
+        <h2>Create New Feedback</h2>
         <form method="post" itemprop="reviewBody">
             {% csrf_token %}
             <p>
@@ -18,7 +21,11 @@
             </p>
             <p>
                 <label for="id_content">Content:</label>
-                <textarea name="content" required="required" id="id_content"></textarea>
+                <textarea name="content" id="id_content"></textarea>
+            </p>
+            <p>
+                <label for="id_date">Content:</label>
+                <input type="date" name="date" disabled id="id_date" itemprop="reviewRating">
             </p>
             <button type="submit">Save</button>
         </form>

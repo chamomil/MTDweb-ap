@@ -1,17 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/coupons.css' %}">
+{% endblock %}
 {% block title %}Coupons and disounts{% endblock %}
 {% block content %}
-    <section itemscope itemtype="https://schema.org/OfferCatalog">
-        <h1 itemprop="name">Coupons and Discounts</h1>
-        <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+    <section itemscope itemtype="https://schema.org/OfferCatalog" id="coupons">
+        <h2 itemprop="name">Coupons and Discounts</h2>
+        <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer" class="coupon">
             <h2 itemprop="name">Coupon 0120</h2>
             <p><strong>Discount:</strong> <span itemprop="price">10%</span></p>
             <p itemprop="description">Take your friend, post a video of you dancing, and get a 10% discount ;)</p>
         </article>
         <hr>
-        <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+        <article itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer" class="coupon">
             <h2 itemprop="name">Coupon 2721</h2>
             <p><strong>Discount:</strong> <span itemprop="price">5%</span></p>
             <p itemprop="description">Get a 5% discount by actively participating in our book-crossing movement</p>

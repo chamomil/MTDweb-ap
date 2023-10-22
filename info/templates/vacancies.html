@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/vacancies.css' %}">
+{% endblock %}
 {% block title %}Vacancies{% endblock %}
 {% block content %}
-    <section>
-        <div itemscope itemtype="https://schema.org/JobPosting">
+    <h2 id="vacancies_title">VACANCIES</h2>
+    <section id="vacancies">
+        <div itemscope itemtype="https://schema.org/JobPosting" class="vacancy">
             <h2 itemprop="title">Customer Service Representative</h2>
             <p><b>Description</b>: <span itemprop="description">Provide exceptional customer service by assisting
                 customers with inquiries, resolving issues, and providing information about movie schedules, promotions,
@@ -12,7 +16,7 @@
                 customer satisfaction.</span></p>
         </div>
 
-        <div itemscope itemtype="https://schema.org/JobPosting">
+        <div itemscope itemtype="https://schema.org/JobPosting" class="vacancy">
             <h2 itemprop="title">Marketing Coordinator</h2>
             <p><b>Description</b>: <span itemprop="description">Develop and implement marketing campaigns to promote
                 movies, events, and special screenings. Responsible for social media management, creating engaging
@@ -20,7 +24,7 @@
                 reach. Strong communication and marketing skills are required.</span></p>
         </div>
 
-        <div itemscope itemtype="https://schema.org/JobPosting">
+        <div itemscope itemtype="https://schema.org/JobPosting" class="vacancy">
             <h2 itemprop="title">Facilities Maintenance Technician</h2>
             <p><b>Description</b>: <span itemprop="description">Ensure the smooth operation and maintenance of cinema
                 facilities. Perform routine maintenance and repairs of building systems, including electrical, plumbing,
@@ -28,7 +32,7 @@
                 environment for employees and patrons.</span></p>
         </div>
 
-        <div itemscope itemtype="https://schema.org/JobPosting">
+        <div itemscope itemtype="https://schema.org/JobPosting" class="vacancy">
             <h2 itemprop="title">Cleaning Attendant</h2>
             <p><b>Description</b>: <span itemprop="description">Responsible for maintaining cleanliness and hygiene
                 throughout the cinema premises, including theater halls, restrooms, lobbies, and common areas. Duties
