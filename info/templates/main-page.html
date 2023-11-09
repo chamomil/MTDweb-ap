@@ -1,10 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block style %}
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
 {% block title %}Main page{% endblock %}
 
 {% block content %}
+    <section id="js_banner">
+        <img src="/static/img/cinemagic_bg.png" id="bg"/>
+        <img src="/static/img/cinemagic_woman.png" id="woman"/>
+        <h2 id="text">CINEMAGIC</h2>
+        <img src="/static/img/cinemagic_man.png" id="man"/>
+        <img src="/static/img/cinemagic_popcorn.png" id="popcorn"/>
+        <img src="/static/img/cinemagic_lights.png" id="lights"/>
+    </section>
     <article itemscope itemtype="https://schema.org/Article" id="last_article">
         <h2 itemprop="headline">Last article: <a href="{{ last_article.get_absolute_url }}">{{ last_article.title }}</a>
         </h2>
@@ -18,8 +27,10 @@
         </figure>
         <section class="banner_info">
             <p itemprop="description" id="banner_read_also">Read also</p>
-            <h3 itemprop="articleBody" id="banner_description">Yandex.Direct banners: advantages and nuances of creation</h3>
-            <p id="banner_text">What is a banner? A static or dynamic image or video ad that contains information about a product or
+            <h3 itemprop="articleBody" id="banner_description">Yandex.Direct banners: advantages and nuances of
+                creation</h3>
+            <p id="banner_text">What is a banner? A static or dynamic image or video ad that contains information about
+                a product or
                 service
                 and sends the user to the advertiser's website …</p>
             <a href="https://romi.center/ru/learning/article/yandeks-direkt-banneri-preimushtestva-i/" class="read_more"
@@ -60,4 +71,5 @@
             </div>
         </div>
     </section>
+    <script src="/static/scripts/home.js"></script>
 {% endblock %}
