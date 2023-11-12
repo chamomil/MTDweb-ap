@@ -11,3 +11,11 @@ class Worker(models.Model):
 
     def __str__(self):
         return self.last_name
+
+
+class MapData(models.Model):
+    date = models.DateField('date_add')
+    key = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.date

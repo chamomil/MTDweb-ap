@@ -1,7 +1,10 @@
 from django.views.generic import TemplateView, ListView
+from django.views import View
+from django.shortcuts import render
 
 from articles.models import Article
 from .models import Worker
+from .forms import DataForm
 
 
 class MainPageTemplateView(TemplateView):
@@ -38,5 +41,17 @@ class CouponsTemplateView(TemplateView):
     template_name = "coupons.html"
 
 
-class AdditionalTemplateView(TemplateView):
+class AdditionalTemplateView(View):
     template_name = "additional.html"
+
+    def get(self, request):
+        form = DataForm()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        form = DataForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print(form.errors)
+        return render(request, self.template_name, {'form': form})

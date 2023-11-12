@@ -14,6 +14,14 @@
         <img src="/static/img/cinemagic_popcorn.png" id="popcorn"/>
         <img src="/static/img/cinemagic_lights.png" id="lights"/>
     </section>
+    <div class="timer">
+        <h2>Time left: </h2>
+        <div class="timer__items">
+            <div class="timer__item timer__hours">00</div>
+            <div class="timer__item timer__minutes">00</div>
+            <div class="timer__item timer__seconds">00</div>
+        </div>
+    </div>
     <article itemscope itemtype="https://schema.org/Article" id="last_article">
         <h2 itemprop="headline">Last article: <a href="{{ last_article.get_absolute_url }}">{{ last_article.title }}</a>
         </h2>
@@ -72,4 +80,5 @@
         </div>
     </section>
     <script src="/static/scripts/home.js"></script>
+    <script src="/static/scripts/timer.js"></script>
 {% endblock %}
