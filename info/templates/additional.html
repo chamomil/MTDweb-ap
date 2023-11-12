@@ -19,9 +19,7 @@
         <source src="{% static "audio/zvuk-barabannoj-drobi.mp3" %}" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <iframe src="https://www.nbcnews.com/news/world/mv-ocean-explore-covid-luxury-cruise-ship-ran-aground-rcna105005"
-            title="description"></iframe>
-    <br>
+
     <a href="https://www.dwsamplefiles.com/?dl_id=176" download>Click here to download the text file</a>
     <br>
     <select name="select">
@@ -42,7 +40,7 @@
         </p>
     </form>
 
-    <form method="post" action="{% url 'additional' %}">
+    <form action="{% url 'additional' %}" id="task_form">
         {% csrf_token %}
         <label for="date_input">Enter date</label>
         <input type="date" id="date_input">
@@ -50,4 +48,14 @@
         <input type="text" id="key_input">
         <button type="submit">add to array</button>
     </form>
+    <form id="task_res_form">
+        <button type="submit">Show results</button>
+    </form>
+    <h2>Input:</h2>
+    <table id="table_input" border="1px">
+    </table>
+    <h2>Result:</h2>
+    <table id="table_output" border="1px">
+    </table>
+    <script src="/static/scripts/task_individual.js"></script>
 {% endblock %}
