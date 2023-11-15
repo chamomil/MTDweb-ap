@@ -40,7 +40,7 @@ p[id^="article_t"] {
 }
 
 p[id^="article_t"]:first-letter {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #7FACD9;
 }
 

@@ -5,7 +5,7 @@
 }
 
 #faq h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
     text-align: center;
     align-items: center;
     color: #1f1a42;
@@ -18,7 +18,7 @@
     background-color: white;
     padding: 40px;
     width: 60%;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 details {

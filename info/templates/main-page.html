@@ -27,11 +27,13 @@
         <a href="https://www.youtube.com/watch?v=rUxyKA_-grg" class="swap_banner"><img src="/static/img/banner2.jpg" alt="lofi girl"></a>
         <a href="https://www.youtube.com/watch?v=4xDzrJKXOOY" class="swap_banner"><img src="/static/img/banner3.jpg" alt="lofi boy"></a>
     </div>
+    {% if user.is_staff %}
     <form id="intervalForm">
         <label for="interval">interval (in sec):</label>
         <input type="number" id="interval" min="1" value="5">
         <button onclick="changeInterval()" id="changeInterval">Change</button>
     </form>
+    {% endif %}
     <article itemscope itemtype="https://schema.org/Article" id="last_article">
         <h2 itemprop="headline">Last article: <a href="{{ last_article.get_absolute_url }}">{{ last_article.title }}</a>
         </h2>

@@ -3,42 +3,60 @@
 {% block style %}
     <link rel="stylesheet" href="{% static 'css/additional.css' %}">
 {% endblock %}
-{% block title %}Contacts{% endblock %}
+{% block title %}Additional{% endblock %}
 {% block content %}
     <h2>Additional page</h2>
-    <code>
-        int a = 0;
-        std::cout << ++a;
-        for (int i = 0; i < 10; ++i) {
-        a *= i;
-        }
-        std::cout << ++a;
-    </code>
-    <br>
-    <audio controls autoplay muted>
-        <source src="{% static "audio/zvuk-barabannoj-drobi.mp3" %}" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <details>
+        <summary>Additional for html and css</summary>
+        <code>
+            int a = 0;
+            std::cout << ++a;
+            for (int i = 0; i < 10; ++i) {
+            a *= i;
+            }
+            std::cout << ++a;
+        </code>
+        <br>
+        <audio controls autoplay muted>
+            <source src="{% static "audio/zvuk-barabannoj-drobi.mp3" %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
 
-    <a href="https://www.dwsamplefiles.com/?dl_id=176" download>Click here to download the text file</a>
-    <br>
-    <select name="select">
-        <option value="value1">Value1</option>
-        <option value="value2">Value2</option>
-    </select>
-    <ul id="list">
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
-        <li>four</li>
-    </ul>
+        <a href="https://www.dwsamplefiles.com/?dl_id=176" download>Click here to download the text file</a>
+        <br>
+        <select name="select">
+            <option value="value1">Value1</option>
+            <option value="value2">Value2</option>
+        </select>
+        <ul id="list">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>four</li>
+        </ul>
+
+        <form>
+            <p>
+                <label for="id_checkbox">checkbox </label>
+                <input type="checkbox" name="checkbox" id="id_checkbox">
+            </p>
+        </form>
+    </details>
 
     <form>
-        <p>
-            <label for="id_checkbox">checkbox </label>
-            <input type="checkbox" name="checkbox" id="id_checkbox">
-        </p>
+        <label for="change_style">custom style </label>
+        <input type="checkbox" id="change_style">
     </form>
+    <div id="change_container"></div>
+
+    <form action="{% url 'additional' %}" id="square_matrix">
+        {% csrf_token %}
+        <label for="sq_matrix_input">Enter n</label>
+        <input type="number" min="1" id="sq_matrix_input">
+        <button type="submit">get matrix</button>
+    </form>
+    <table id="sq_matrix_output" border="1px">
+    </table>
 
     <form action="{% url 'additional' %}" id="task_form">
         {% csrf_token %}
@@ -51,11 +69,13 @@
     <form id="task_res_form">
         <button type="submit">Show results</button>
     </form>
-    <h2>Input:</h2>
+    <h2 id="input_text">Input:</h2>
     <table id="table_input" border="1px">
     </table>
-    <h2>Result:</h2>
+    <h2 id="result_text">Result:</h2>
     <table id="table_output" border="1px">
     </table>
     <script src="/static/scripts/task_individual.js"></script>
+    <script src="/static/scripts/sq_matrix.js"></script>
+    <script src="/static/scripts/change_style.js"></script>
 {% endblock %}

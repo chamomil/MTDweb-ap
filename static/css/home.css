@@ -84,13 +84,13 @@ main {
 
 .banner_info {
     padding-right: 15px;
-    font-size: 19px;
+    font-size: 1.188rem;
     font-family: "barlow", serif;
 
 }
 
 .banner_info h3 {
-    font-size: 25px;
+    font-size: 1.563rem;
 }
 
 .banner_info a {
@@ -98,7 +98,7 @@ main {
 }
 
 #banner_read_also {
-    font-size: 24px;
+    font-size: 1.5rem;
     width: fit-content;
     position: relative;
     animation: 6s linear 0s infinite alternate read_also_transform,
@@ -117,7 +117,7 @@ main {
 #partners > h3 {
     margin: 50px 0 30px;
     text-align: center;
-    font-size: 23px;
+    font-size: 1.438rem;
 }
 
 #partners_icons {
@@ -137,7 +137,7 @@ main {
     height: 175px;
     padding: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .partner:hover {
@@ -210,7 +210,7 @@ main {
 
 .timer__items {
   display: flex;
-  font-size: 48px;
+  font-size: 3rem;
 }
 .timer__item {
   position: relative;
@@ -227,7 +227,7 @@ main {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .timer__item:not(:last-child)::after {
   content: ':';
@@ -249,17 +249,17 @@ main {
 
 #intervalForm label {
     margin: 10px;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 #intervalForm input {
     padding: 10px;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 #intervalForm button {
     padding: 15px;
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-left: 20px;
     cursor: pointer;
     background-color: #1f1a42;

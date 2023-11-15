@@ -38,7 +38,7 @@ div, div:before, div:after {
     white-space: nowrap;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    font-size: 18px;
+    font-size: 1.125rem;
     overflow: hidden;
     min-height: 95%;
 }
@@ -63,7 +63,7 @@ div, div:before, div:after {
 }
 
 .article > h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     align-items: center;
     justify-content: center;
     text-align: center;

@@ -44,7 +44,7 @@ main > h2 {
     text-align: center;
     margin: 40px;
     color: #1f1a42;
-    font-size: 48px;
+    font-size: 3rem;
     animation: 5s linear 0s infinite alternate read_also_transform;
 }
 
