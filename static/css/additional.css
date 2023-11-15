@@ -63,5 +63,11 @@ main {
 
 #change_container div {
     display: flex;
+    justify-content: space-evenly;
+}
+
+#change_container input {
+    margin-left: 30px;
+    margin-top: 20px;
 }
 
