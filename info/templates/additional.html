@@ -57,11 +57,21 @@
     <form action="{% url 'additional' %}" id="square_matrix">
         {% csrf_token %}
         <label for="sq_matrix_input">Enter n</label>
-        <input type="number" min="1" id="sq_matrix_input">
+        <input type="number" min="1" id="sq_matrix_input" value="1">
+        <br>
+        <label for="sq_matrix_max">Enter max amount of selected elements</label>
+        <input type="number" min="1" id="sq_matrix_max" value="1">
         <button type="submit">get matrix</button>
     </form>
+
     <table id="sq_matrix_output" border="1px">
     </table>
+
+    <form>
+        <button type="submit" id="transpose_matrix">Transpose</button>
+        <button type="submit" id="add_row">Add row</button>
+        <button type="submit" id="add_column">Add column</button>
+    </form>
 
     <form action="{% url 'additional' %}" id="task_form">
         {% csrf_token %}

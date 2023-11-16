@@ -77,3 +77,7 @@ main button:hover {
     margin-bottom: 20px;
 }
 
+main table {
+    margin: 20px;
+}
+
