@@ -27,6 +27,11 @@
     </section>
     <section itemscope itemtype="https://schema.org/Event" id="available_sessions">
         <h2 itemprop="name">Available Movie Sessions</h2>
+        <form id="coupon_form">
+            <label for="coupon_input">Coupon: </label>
+            <input type="number" id="coupon_input">
+            <button id="coupon_submit">Apply</button>
+        </form>
         <div class="all_tickets">
             {% for session in movie.moviesession_set.all %}
                 {% if session.is_valid %}
@@ -39,7 +44,7 @@
                         </p>
                         <p>Price <span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span
                                 itemprop="priceCurrency" content="USD">$</span><span
-                                itemprop="price">{{ session.price_per_ticket }}</span></span></p>
+                                itemprop="price" class="ticket_price">{{ session.price_per_ticket }}</span></span></p>
                         <form action="{% url 'reserve_ticket' %}" method="post">
                             {% csrf_token %}
                             <input id="id_session_id" name="session_id" type="number" value="{{ session.id }}"
@@ -51,4 +56,5 @@
             {% endfor %}
         </div>
     </section>
+    <script src="/static/scripts/coupons.js"></script>
 {% endblock %}
