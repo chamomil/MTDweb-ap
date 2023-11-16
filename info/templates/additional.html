@@ -49,6 +49,11 @@
     </form>
     <div id="change_container"></div>
 
+    <form>
+        <label for="birth_date">Enter your date of birth: </label>
+        <input type="date" id="birth_date">
+    </form>
+
     <form action="{% url 'additional' %}" id="square_matrix">
         {% csrf_token %}
         <label for="sq_matrix_input">Enter n</label>
@@ -78,4 +83,5 @@
     <script src="/static/scripts/task_individual.js"></script>
     <script src="/static/scripts/sq_matrix.js"></script>
     <script src="/static/scripts/change_style.js"></script>
+    <script src="/static/scripts/birth_date.js"></script>
 {% endblock %}
