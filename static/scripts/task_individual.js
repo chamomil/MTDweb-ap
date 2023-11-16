@@ -61,13 +61,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function filterSpringDates(map) {
-    /** @type {Map<string, [Date]>} */
+    /** @type {Map<string, Date[]>} */
     const springEntries = new Map();
 
     for (const [key, date] of map) {
         for (let item of date) {
             if (item.getMonth() >= 2 && item.getMonth() <= 4) {
-                springEntries.set(key, date);
                 let arr = springEntries.get(key);
                 if (arr === undefined) {
                     springEntries.set(key, [item]);
