@@ -217,8 +217,7 @@ SquareMatrix.prototype.transposeMatrix = function (event) {
 
 SquareMatrix.prototype.changeColor = function (cell) {
     if (cell.classList.contains('selected')) {
-        cell.classList.remove('selected');
-        cell.style.backgroundColor = ''; // Reset background color
+        this.clearCell(cell);
         return;
     }
 
@@ -260,6 +259,11 @@ SquareMatrix.prototype.changeColor = function (cell) {
     } else {
         cell.style.backgroundColor = "#F5BD7C"
     }
+};
+
+SquareMatrix.prototype.clearCell = function (cell) {
+    cell.classList.remove('selected');
+    cell.style.backgroundColor = ''; // Reset background color
 };
 
 SquareMatrix.prototype.addRow = function (e) {
