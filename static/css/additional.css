@@ -1,8 +1,3 @@
-#text_additional {
-    position: fixed;
-    top: 80%;
-}
-
 li {
     list-style-type: '⚡';
     width: fit-content;
@@ -20,7 +15,69 @@ main li:nth-child(3) {
     background-color: #b9cb67;
 }
 
-input:checked {
+#id_checkbox:checked {
     border: none;
     outline: 10px solid deeppink;
 }
+
+#input_text, #result_text {
+    visibility: hidden;
+}
+
+main {
+    margin: 20px;
+}
+
+#change_style {
+    margin: 20px;
+    cursor: pointer;
+}
+
+#change_container {
+    margin-bottom: 20px;
+    width: fit-content;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+#change_container button {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 10px;
+    width: 45px;
+    height: 45px;
+}
+
+main button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #1f1a42;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+main button:hover {
+    background-color: #3f3485;
+}
+
+#change_container div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#change_container input {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+#square_matrix {
+    margin-bottom: 20px;
+}
+
+main table {
+    margin: 20px;
+}
+

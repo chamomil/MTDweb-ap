@@ -15,7 +15,7 @@ main input[value^="C"] {
     margin-right: 15px;
     background-color: #120F26;
     color: white;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 main input[value^="C"]:hover {

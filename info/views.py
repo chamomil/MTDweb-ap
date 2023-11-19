@@ -1,4 +1,5 @@
 from django.views.generic import TemplateView, ListView
+from django.views import View
 
 from articles.models import Article
 from .models import Worker

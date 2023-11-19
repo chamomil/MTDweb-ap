@@ -42,7 +42,7 @@ main {
     height: fit-content;
     box-shadow: 0 5px 15px rgba(157, 184, 245, 96);
     color: white;
-    grid-row: 4;
+    grid-row: 8;
     grid-column: 1;
 }
 
@@ -54,7 +54,7 @@ main {
 
 .banner {
     grid-column: 2/5;
-    grid-row: 4;
+    grid-row: 8;
     display: flex;
     border-radius: 10px;
     margin-right: 60px;
@@ -84,13 +84,13 @@ main {
 
 .banner_info {
     padding-right: 15px;
-    font-size: 19px;
+    font-size: 1.188rem;
     font-family: "barlow", serif;
 
 }
 
 .banner_info h3 {
-    font-size: 25px;
+    font-size: 1.563rem;
 }
 
 .banner_info a {
@@ -98,7 +98,7 @@ main {
 }
 
 #banner_read_also {
-    font-size: 24px;
+    font-size: 1.5rem;
     width: fit-content;
     position: relative;
     animation: 6s linear 0s infinite alternate read_also_transform,
@@ -109,7 +109,7 @@ main {
 #partners {
     grid-column: 1/5;
     margin: 0 0 60px;
-    grid-row: 5;
+    grid-row: 9;
     color: #1f1a42;
     padding-bottom: 40px;
 }
@@ -117,7 +117,7 @@ main {
 #partners > h3 {
     margin: 50px 0 30px;
     text-align: center;
-    font-size: 23px;
+    font-size: 1.438rem;
 }
 
 #partners_icons {
@@ -137,7 +137,7 @@ main {
     height: 175px;
     padding: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .partner:hover {
@@ -151,12 +151,12 @@ main {
 #js_banner {
     position: relative;
     width: 100vw;
-    height: 80vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-row: 1/4;
+    grid-row: 1/5;
     grid-column: 1/5;
     margin: -50px -30px 0;
     z-index: 0;
@@ -206,4 +206,87 @@ main {
     .partner {
         margin: 20px;
     }
+}
+
+.timer__items {
+  display: flex;
+  font-size: 3rem;
+}
+.timer__item {
+  position: relative;
+  min-width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 0.875rem;
+}
+.timer__item:not(:last-child)::after {
+  content: ':';
+  position: absolute;
+  right: -15px;
+}
+
+.timer {
+    grid-row: 5;
+    display: flex;
+    grid-column: 3;
+    justify-content: space-evenly;
+}
+
+#intervalForm {
+    grid-row: 6/8;
+    grid-column: 3/5;
+}
+
+#intervalForm label {
+    margin: 10px;
+    font-size: 1.25rem;
+}
+
+#intervalForm input {
+    padding: 10px;
+    font-size: 1.125rem;
+}
+
+#intervalForm button {
+    padding: 15px;
+    font-size: 1.125rem;
+    margin-left: 20px;
+    cursor: pointer;
+    background-color: #1f1a42;
+    color: white;
+    border-radius: 10px;
+}
+
+#intervalForm button:hover {
+    background-color: #3f3485;
+}
+
+.swap_banner_container {
+    grid-row: 5/8;
+    grid-column: 1/3;
+    display: flex;
+    overflow: hidden;
+    width: 600px; /* Adjust to fit your banners */
+    margin: 0 300px; /* Center the banners */
+    position: relative;
+}
+
+.swap_banner {
+    flex: 0 0 100%;
+    transition: transform 1s ease;
+}
+
+.swap_banner img {
+    width: 100%;
+    height: auto;
 }

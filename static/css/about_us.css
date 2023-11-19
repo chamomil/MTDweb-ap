@@ -24,7 +24,7 @@
     width: 50%;
     display: flex;
     justify-content: space-around;
-    font-size: 20px;
+    font-size: 1.25rem;
     background-color: white;
     padding: 20px;
     border-radius: 30px;
@@ -43,7 +43,7 @@
     gap: 80px;
     grid-row-gap: 30px;
     grid-auto-rows: minmax(100px, auto);
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .about_us_intro img {
@@ -54,7 +54,7 @@
 .about_us_intro h2 {
     grid-column: 2/4;
     grid-row: 1;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #1f1a42;
     font-variant: small-caps;
 }
@@ -70,7 +70,7 @@
     background-color: white;
     width: 60%;
     padding: 20px 40px;
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-bottom: 35px;
     text-indent: 25px;
     word-break: break-all;
@@ -82,12 +82,12 @@
 
 #hist {
     width: 60%;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 #hist h2 {
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bolder;
     color: #1f1a42;
     margin-top: 30px;
@@ -114,11 +114,11 @@ video {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 #about_us_contact h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 #certificate {
@@ -159,7 +159,7 @@ video {
 
 a[href="#top"]{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25rem;
     padding: 20px;
     margin: 30px;
 }

@@ -6,7 +6,7 @@ main {
 }
 
 main > h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 .feedback {
@@ -18,7 +18,7 @@ main > h2 {
 button {
     padding: 20px 30px;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 1.125rem;
     background-color: #1f1a42;
     color: white;
     cursor: pointer;
